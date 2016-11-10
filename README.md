@@ -1,4 +1,4 @@
-# ClientSideMenuDemo
+# Client-Side Only Demo
 Sample application that is client side only using JavaScript, JQuery, HTML5 and CSS3
 
 Menu expland & collapse through CSS without JavaScript.
