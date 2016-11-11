@@ -1,0 +1,97 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Client Side Demo by Mark Brundieck</title>
+    <link rel="shortcut icon" href="images/favicon.png" />
+    <link href="Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="Content/bootstrap-theme.min.css" rel="stylesheet" />
+    <link href="Content/Site.css" rel="stylesheet" />
+    <script src="Scripts/jquery-3.1.1.min.js"></script>
+    <script src="Scripts/bootstrap.min.js"></script>
+    <script src="Scripts/utilityScripts.js"></script>
+    <script src="Scripts/DemoScripts.js"></script>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <div class="col-xs-12 column">
+        <div id="main-section-header">
+            <ul id='menuList'><li><button type='button' class='' data-toggle='collapse' data-target='#menu-target'>&#9776;</button><div id='menu-target' class='menu-container'><ul><li class='nav-button' onclick="ShowDefault();">Main display</li><li class='nav-button' onclick="ShowTempConversion();">Convert Temps</li></ul></div></li></ul>
+            <div data-role="toolbar" id="header-toolBar">
+                <img src="images/NixaB_logo.jpg" />
+                <div id="toolbar-title">Client-side Demo by Mark Brundieck</div>
+            </div>
+        </div>
+
+        <div style="clear:both;"></div>
+        <div id="main-section-content" style="margin-top:90px;">
+            <div id="DefaultDisplay" class="container">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div>
+                            <img src="images/TeamworkPuzzle.jpg" class="section-image" />
+                        </div>
+                        <div>
+                            <h1>Teamwork</h1>
+                            <p class="lead">Stronger together as we play off each other's strengths.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div>
+                            <img src="images/share-idea-Bulb.jpg" class="section-image" />
+                        </div>
+                        <div>
+                            <h1>Innovation</h1>
+                            <p class="lead">Creatively finding ways to do things better, smarter, faster.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div>
+                            <img src="images/MentorSigns.png" class="section-image" />
+                        </div>
+                        <div>
+                            <h1>Developing Others</h1>
+                            <p class="lead">Helping people to improve and become their best.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div>
+                            <img src="images/jump_for_joy.jpg" class="section-image" />
+                        </div>
+                        <div>
+                            <h1>Heartening Experiences</h1>
+                            <p class="lead">Providing encouragement, positive experiences that can be looked back on with fondness.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="TempConvertDisplay" class="container">
+                <div class="row">
+                    <h1>Conversion of Temperature</h1>
+                    <h3>Quick Celsius (<strong>&deg;C</strong>) / Fahrenheit (<strong>&deg;F</strong>) Conversion:</h3>
+
+                    <p><br/>Type a value in either box: </p>
+                    <b class="large">&deg;C:</b>
+                    <input type="text" name="CelsiusBox" id="CelsiusBox" value="0" size="20" style="text-align:center; font-size: 17px;" onKeyDown="FahrenheitBox.value = CelsiusToFahr(this.value)" onKeyUp="FahrenheitBox.value = CelsiusToFahr(this.value)" />
+
+                    <br><b class="large">&deg;F:</b>
+                    <input type="text" name="FahrenheitBox" id="FahrenheitBox" value="32" size="20" style="text-align:center; font-size: 17px;" onkeyup="CelsiusBox.value = FahrToCelsius(this.value)"
+                           onKeyDown="CelsiusBox.value = FahrToCelsius(this.value)" />
+                    <p id="validationDisplay" class="alert-danger" style="width:200px;"></p>
+                    <p><br /><br /></p>
+                </div>
+            </div>
+        </div>
+        <p><br /></p>
+        <p><br /></p>
+    </div>
+            <nav class="navbar navbar-default navbar-fixed-bottom" role="navigation">
+                &copy; Mark Brundieck
+                <script>document.write(new Date().getFullYear());
+                    ShowDefault();
+                </script>
+            </nav>
+</body>
+</html>
