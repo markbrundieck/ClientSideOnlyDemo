@@ -1,0 +1,390 @@
+﻿html,body,div, span, iframe,
+h1, h2, h3, h4, h5, h6, p, a, img, dl, dt, dd, ol, ul, li,
+table, tfoot, thead, tr, th, td,
+article, aside, canvas, details,  header, section {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+}
+html {
+    position: relative;
+    min-height: 100%;
+    font-size: 100%;
+}
+
+/* HTML5 display-role reset for older browsers */
+body {
+    line-height: 1;
+    font-size: 14px;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+html, body {
+height: 100%;
+font-family: Calibri,'Open Sans',arial,sans-serif;
+    background-color: transparent;
+}
+
+html,
+body,
+.container-fluid,
+.row,
+.column{
+  height: 100%;
+}
+
+a {
+    color: #333;
+    outline: none;
+    padding-left: 3px;
+    padding-right: 3px;
+    text-decoration: underline;
+}
+
+a:link, a:visited,
+a:active, a:hover {
+    color: #333;
+}
+
+a:hover {
+    background-color: #c7d1d6;
+}
+
+
+.clear-fix:after {
+    content: ".";
+    clear: both;
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+
+h1, h2, h3,
+h4, h5, h6 {
+    color: #000;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+h1 {
+    font-size: 2em;
+}
+
+
+h3 {
+    font-size: 1.2em;
+}
+
+/* Bootstrap overrides*/
+.row,
+.container-fluid {
+   padding: 0;
+   margin: 0;
+}
+
+.column{
+  padding-left: 0;
+  padding-right: 0;
+}
+
+
+/* buttons on nav */
+.nav-button {
+    font-size:16px;
+    text-wrap:normal;
+}
+
+
+/* page elements
+----------------------------------------------------------*/
+/* Main section & header
+    to keep the header stuck at the top and the 
+    body to scroll underneath & scrollbars show.
+    A) of section set:  overflow: inherit;
+    B) of header set: position:fixed;  top:0;z-index:999;
+*/
+
+#main-section-header{
+     background-color:#2b6989;
+    background-image: radial-gradient(#7ac0da,#2b6989);
+}
+#main-section-header,#header-toolBar {   
+    color:black;
+    font-family:Arial,Helvetica, Sans-Serif;
+    font-size:11px;
+}
+#header-toolBar{
+    background-color:transparent;
+}
+/* keep background-color:transparent;
+    for menu list, because it affects the 
+    area surrounding the button in the toolbar
+*/
+#menuList {
+	list-style:none;
+	/*width:auto;*/
+    /*top:18px;*/
+	margin:0 auto;
+	/*height:45px;*/
+	padding:8px 8px;
+  background-color:transparent;
+  position:fixed;
+  /*z-index:991;*/
+}
+/* 3 line menu background color consistency:
+    #menuList: ul, ul li, button, menu-container
+
+*/
+#menuList ul li,  #menuList .menu-container, #menu-target:hover  {
+    
+    background-color:#d3dce0;
+}
+#menuList ul, #menuList li{
+	line-height:22px;
+	text-align:left;
+	font-size:14px;
+}
+
+#menuList li {
+	float:left;
+	display:block;
+	position:relative;
+	text-align:center;
+	padding:1px 9px 2px 2px;
+	margin:7px 0px 0 0;
+	border:none;
+}
+
+/* initial left position off the page, so it doesn't show until click event */
+#menuList .menu-container{
+	margin:0px auto;
+	float:left;
+	position:absolute;
+	left:-999em;
+	text-align:left;
+	padding:10px 5px;
+	border:1px solid #b7b7b7;
+    border-radius:0 5px 5px 5px;
+	-moz-border-radius:0 5px 5px 5px;
+	-webkit-border-radius:0 5px 5px 5px;
+	width:auto;
+}
+/* needed for the menu to pop-out*/
+#menuList li:hover .menu-container{
+	top:100%;
+	left:-1px;
+    margin-top: -4px;
+    z-index:950;
+}
+
+/* without this hover action causes it to be jumpy*/
+#menuList li ul li {
+	float: none;
+	font-size: 12px;
+	line-height: 24px;
+	margin: 0;
+	padding: 0;
+	position: relative;
+	text-align: left;
+}
+#menuList li ul li:hover {
+	background: none;
+	border: medium none;
+	margin: 0;
+	padding: 0;
+    background-color:#a4d4e6;
+    font-weight:600;
+}
+
+#main-section-header{
+    font-size: 18px;
+    line-height: 26px;
+    white-space: nowrap;
+    
+    text-align:left;   
+    float:left;
+    height:70px;
+    top:0;
+    left:0px;
+    right:0;
+    padding:0;
+    padding-top:0px;
+    border-bottom: 1px solid #ededee;
+    -moz-box-shadow: 1px 0 4px #ededee;
+    -webkit-box-shadow: 1px 0 4px #ededee;
+    box-shadow: 1px 0 4px #ededee;
+    position:fixed;
+    z-index:800;
+}
+#header-toolBar {
+    position:fixed;  
+    width:94%;
+    z-index:911;
+    border-color:transparent;
+    left:48px;
+    top:10px;
+    padding:2px 1px;
+}
+
+#main-section-content {
+    position: relative;
+    padding:0;
+    top: 0px;
+    left:15px;
+}
+
+#toolbar-title{
+    left:110px;
+    top:10px;
+    padding:8px 1px;
+    background-color:transparent;
+    color:white;
+    font-weight:800;
+    font-size:14px;
+    position:fixed;
+}
+
+.section-image{
+    max-height:230px;
+    max-width:400px;
+    margin-top:0px;
+    margin-bottom:0px;
+}
+
+
+/**********************
+*   Support different *
+*    Media sizes      *
+**********************/
+
+/*max-width: 768px -> .col-xs- */
+@media screen and (max-width: 768px) {
+    .column {
+        height: auto;
+    }
+
+    .row-offcanvas {
+        position: relative;
+        -webkit-transition: all 0.25s ease-out;
+        -moz-transition: all 0.25s ease-out;
+        transition: all 0.25s ease-out;
+    }
+
+    .row-offcanvas-left .sidebar-offcanvas {
+        left: -50%;
+    }
+
+    .row-offcanvas-left.active {
+        left: 50%;
+    }
+    #main-section {
+        width: 100%;       
+    }
+    #main-section-header {
+        font-size: 14px;
+        text-wrap:normal;
+    }
+
+    #main-section-header > h2 {
+        display: block;
+        font-size:16px;
+        text-wrap:normal;
+        width: 100%;
+        text-align: center;
+        padding-bottom: 15px;
+    }
+
+    #header-toolBar {
+        width:90%;
+    }
+    .section-image {
+        max-height: 150px;
+        max-width: 250px;
+    }
+} /* end of media screen and (max-width: 768px) */
+
+@media screen and (min-width: 380px) and (max-width: 557px) {
+    .nav-button {
+        font-size: 10px;
+        text-wrap: normal;
+    }
+
+    .section-image {
+        max-height: 100px;
+        max-width: 150px;
+    }
+}
+@media screen and (min-width: 558px) and (max-width: 632px) {
+    #header-toolBar {
+        width:85%;
+    }
+    .section-image {
+        max-height: 150px;
+        max-width: 250px;
+    }
+}
+@media screen and (min-width: 768px) and (max-width: 831px) {
+    #main-section-header h2 {
+        font-size: 14px;
+    }
+
+    .nav-button {
+        font-size: 12px;
+        text-wrap: normal;
+    }
+
+    .section-image {
+        max-height: 150px;
+        max-width: 250px;
+    }
+}
+@media screen and (min-width: 768px) and (max-width:992px) {
+    #main-section-header h2 {
+        padding-right: 0;
+        font-size: 14px;
+    }
+
+    .section-image {
+        max-height: 150px;
+        max-width: 250px;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 863px) {
+    #main-section-header h2 {
+        padding-right: 0;
+        font-size: 14px;
+    }
+
+    .nav-button {
+        font-size: 14px;
+        text-wrap: normal;
+    }
+
+    .section-image {
+        max-height: 150px;
+        max-width: 250px;
+    }
+}
+
+@media screen and (min-width: 863px) and (max-width:1040px) {
+    #main-section-header h2 {
+        font-size: 14px;
+    }
+
+    .section-image {
+        max-height: 150px;
+        max-width: 250px;
+    }
+
+    .nav-button {
+        font-size: 14px;
+        text-wrap: normal;
+    }
+}
+
+/* End custom screen size differences */
